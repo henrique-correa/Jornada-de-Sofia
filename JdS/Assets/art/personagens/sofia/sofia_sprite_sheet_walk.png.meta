@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 2e9f0000d5af8a2409049372d5b8acdd
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sofia_sprite_sheet_walk
+    21300002: sofia_sprite_sheet_walk_0
+    21300004: sofia_sprite_sheet_walk_1
+    21300006: sofia_sprite_sheet_walk_2
+    21300008: sofia_sprite_sheet_walk_3
+    21300010: sofia_sprite_sheet_walk_4
+    21300012: sofia_sprite_sheet_walk_5
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: sofia_sprite_sheet_walk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 266
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sofia_sprite_sheet_walk_1
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1
+        width: 336
+        height: 722
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sofia_sprite_sheet_walk_2
+      rect:
+        serializedVersion: 2
+        x: 980
+        y: 28
+        width: 276
+        height: 694
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sofia_sprite_sheet_walk_3
+      rect:
+        serializedVersion: 2
+        x: 1483
+        y: 28
+        width: 265
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sofia_sprite_sheet_walk_4
+      rect:
+        serializedVersion: 2
+        x: 1975
+        y: 31
+        width: 337
+        height: 692
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: sofia_sprite_sheet_walk_5
+      rect:
+        serializedVersion: 2
+        x: 2465
+        y: 28
+        width: 274
+        height: 695
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

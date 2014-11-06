@@ -1,0 +1,202 @@
+fileFormatVersion: 2
+guid: 4c5d499a8ece0344d8f546959fa8177d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: cachorro_sprite_sheet_run
+    21300002: cachorro_sprite_sheet_run_0
+    21300004: cachorro_sprite_sheet_run_1
+    21300006: cachorro_sprite_sheet_run_2
+    21300008: cachorro_sprite_sheet_run_3
+    21300010: cachorro_sprite_sheet_run_4
+    21300012: cachorro_sprite_sheet_run_5
+    21300014: cachorro_sprite_sheet_run_6
+    21300016: cachorro_sprite_sheet_run_7
+    21300018: cachorro_sprite_sheet_run_8
+    21300020: cachorro_sprite_sheet_run_9
+    21300022: cachorro_sprite_sheet_run_10
+    21300024: cachorro_sprite_sheet_run_11
+    21300026: cachorro_sprite_sheet_run_12
+    21300028: cachorro_sprite_sheet_run_13
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 1
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: cachorro_sprite_sheet_run_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 772
+        width: 571
+        height: 529
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_1
+      rect:
+        serializedVersion: 2
+        x: 828
+        y: 772
+        width: 571
+        height: 532
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_2
+      rect:
+        serializedVersion: 2
+        x: 1565
+        y: 782
+        width: 571
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_3
+      rect:
+        serializedVersion: 2
+        x: 2302
+        y: 797
+        width: 597
+        height: 504
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_4
+      rect:
+        serializedVersion: 2
+        x: 3060
+        y: 818
+        width: 634
+        height: 486
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_5
+      rect:
+        serializedVersion: 2
+        x: 3855
+        y: 808
+        width: 643
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_6
+      rect:
+        serializedVersion: 2
+        x: 4664
+        y: 782
+        width: 652
+        height: 522
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 652
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_8
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 0
+        width: 638
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_9
+      rect:
+        serializedVersion: 2
+        x: 1622
+        y: 0
+        width: 639
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_10
+      rect:
+        serializedVersion: 2
+        x: 2427
+        y: 0
+        width: 597
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_11
+      rect:
+        serializedVersion: 2
+        x: 3190
+        y: 0
+        width: 540
+        height: 527
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_12
+      rect:
+        serializedVersion: 2
+        x: 3891
+        y: 0
+        width: 514
+        height: 526
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: cachorro_sprite_sheet_run_13
+      rect:
+        serializedVersion: 2
+        x: 4571
+        y: 13
+        width: 561
+        height: 514
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

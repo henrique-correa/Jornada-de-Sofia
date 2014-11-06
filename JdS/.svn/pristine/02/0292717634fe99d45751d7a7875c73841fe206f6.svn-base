@@ -1,0 +1,49 @@
+﻿using UnityEngine;
+using System.Collections;
+
+public class inimigo_cachorro : MonoBehaviour {
+	Vector2 push;
+	RaycastHit2D hit;
+	RaycastHit2D hit2;
+	[SerializeField]float distancia = 2.0f;
+	[SerializeField]float ini_velo = 5.0f;
+
+	int raylayer;
+	// Use this for initialization
+	void Start () {
+
+		raylayer = 1 << 8;
+		push.x = -5000.0f;
+		push.y = 0.0f;
+
+	
+	}
+	
+	// Update is called once per frame
+	void FixedUpdate () {
+		//esquerda = transform.TransformDirection(-Vector2.right);
+		hit = Physics2D.Raycast(transform.position,-Vector2.right,distancia,raylayer);
+
+		hit2 = Physics2D.Raycast(transform.position,Vector2.right,distancia,raylayer);
+		//Debug.Log (hit.ToString());
+		//nome = hit.ToString();
+		if (hit.collider != null){
+			Debug.Log ("inimigo ve o player");
+			//rigidbody2D.AddForce(esquerda);
+			rigidbody2D.velocity = new Vector2(-1,0) * ini_velo;
+		}
+		if (hit2.collider != null){
+			Debug.Log ("inimigo ve o player");
+			//rigidbody2D.AddForce(direita);
+			rigidbody2D.velocity = new Vector2(1,0) * ini_velo;
+		}
+
+					
+	
+	}
+	void OnCollisionEnter2D(Collision2D col){
+		if(col.gameObject.name == "Sofia"){
+			//col.gameObject.rigidbody2D.AddForce(push);
+		}
+	}
+}
