@@ -36,6 +36,11 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    <Reference Include="UnityEngine">
+      <HintPath>D:\Programas Frederico\Unity\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEditor">
+      <HintPath>D:\Programas Frederico\Unity\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

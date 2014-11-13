@@ -12,10 +12,20 @@ using System.Text;
 public class gerente : MonoBehaviour
 {
 
+<<<<<<< HEAD
 	//GameObject npc1;
 	//GameObject npc2;
 	public List<GameObject> obj_list;
 	public List<deposito> scene_depo;
+=======
+	Vector3 pos = new Vector3(2.80f, 0.40f, 0.0f);
+	Vector3 pos_p = new Vector3(-2.29f, 0.48f, 0.0f);
+	//bool novo_jogo = true;
+	GameObject npc;
+	GameObject p;
+	deposito scene_depo;
+	//manager m;
+>>>>>>> origin/master
 
 	void criar_scene() {
 		//AI director ve quais os parametros para criar os objetos da scene

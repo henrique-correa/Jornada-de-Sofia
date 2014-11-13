@@ -12,6 +12,7 @@ using System.IO;
 
 public class SaveLoad {
 
+<<<<<<< HEAD
 
 
 	public static void Save(List<GameObject> aSerSalvo) {
@@ -86,6 +87,20 @@ public class SaveLoad {
 					temp.y = float.Parse( l[2] );
 					scene_depoLOADED.Add(temp);
 				}
+=======
+		//Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
+		FileStream f = File.Create ("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg"); //you can call it anything you want
+		bf.Serialize(f, s);
+		f.Close();
+	}   
+	
+	public static void Load() {
+		if(File.Exists("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg")) {
+			BinaryFormatter bfl = new BinaryFormatter();
+			FileStream fl = File.Open("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg", FileMode.Open);
+			scene_depoLOADED = (deposito)bfl.Deserialize(fl);
+			fl.Close();
+>>>>>>> origin/master
 
 				Debug.Log(scene_depoLOADED[0].x);
 			}
