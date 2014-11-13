@@ -12,26 +12,49 @@ using UnityEngine;
 using System.Collections;
 
 
-	public class rato : MonoBehaviour
+public class rato : MonoBehaviour
+{
+	RaycastHit2D hit;
+	RaycastHit2D hit2;
+	int raiolayer;
+	[SerializeField]float vel = 0.8f;
+	[SerializeField]float distancia_visao = 5.0f;
+	bool direita = true;
+
+
+
+	void Start(){
+		raiolayer = 1 << 8;
+	}
+
+	void FixedUpdate(){
+
+		hit = Physics2D.Raycast(transform.position,-Vector2.right,distancia_visao,raiolayer);
+		hit2 = Physics2D.Raycast(transform.position,Vector2.right,distancia_visao,raiolayer);
+
+		if(hit.collider != null ){
+			if(direita == true){
+				Flip();
+				direita = false;
+			}
+			gameObject.rigidbody2D.velocity = new Vector2(-1.0f, 0.0f) * vel;
+		}
+
+		if(hit2.collider != null ){
+			if(direita == false){
+				Flip();
+				direita = true;
+			}
+			gameObject.rigidbody2D.velocity = new Vector2(1.0f, 0.0f) * vel;
+		}
+	}
+
+	void Flip ()
 	{
-
-	//int id;
-
-		void Star(){
-
-		}
-
-		void Update(){
-
-		}
-
-	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.name == "Sofia"){
-			Debug.Log ("rato empurra");
-			;
-
-		}
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
-	}
+}
 
 

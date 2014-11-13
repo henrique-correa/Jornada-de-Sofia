@@ -147,9 +147,9 @@ TextureImporter:
     - name: sofia_sprite_sheet_idle_9
       rect:
         serializedVersion: 2
-        x: 4245
+        x: 4243
         y: 0
-        width: 267
+        width: 269
         height: 720
       alignment: 0
       pivot: {x: .5, y: .5}

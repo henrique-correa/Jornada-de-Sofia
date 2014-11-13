@@ -1,0 +1,4 @@
+#tipo    x     y     vida     vida_max     corda     corda_max     fase     checkpoint
+Sofia -8.88 1.92 3 3 1000.0 1000.0 1 0
+cachorro 20.55 0.97 null null null null null null
+cachorro 1.66 0.97 null null null null null null

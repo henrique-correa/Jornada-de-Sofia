@@ -10,6 +10,9 @@ public class jogador : MonoBehaviour {
 
 	[SerializeField]float tempo_de_corda =900.0f;
 	[SerializeField]int vida = 3;
+	[SerializeField]float corda_max = 1000.0f;
+	[SerializeField]int vida_max = 5;
+	Vector2 np;
 	Vector2 npos;
 	GameObject texto;
 	GameObject texto2;
@@ -27,6 +30,13 @@ public class jogador : MonoBehaviour {
 		texto2 = GameObject.Find("debug_2");
 		texto3 = GameObject.Find("debug_3");
 
+		if(manager.cont == 1){
+			vida_max = manager.vida_max_p;
+			vida = manager.vida_max_p;
+			corda_max = manager.corda_max_p;
+			tempo_de_corda = manager.corda_max_p;
+		}
+
 		charac = GetComponent<PlatformerCharacter2D>();
 		charac2 = GetComponent<Platformer2DUserControl>();
 	
@@ -34,8 +44,10 @@ public class jogador : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		tempo_de_corda -= 1.0f;
+		if(tempo_de_corda > 0){
+			tempo_de_corda -= 1.0f;
 		//if (tempo_de_corda < 1.0f){
+		}
 
 
 		if(resetspeed == true){
@@ -48,6 +60,7 @@ public class jogador : MonoBehaviour {
 
 		}
 		if(vida <=0){
+			manager.p_morreu = true;
 			Destroy(gameObject);
 		}
 		if(colidiuPASSARO == true){
@@ -70,6 +83,10 @@ public class jogador : MonoBehaviour {
 		texto2.guiText.text = col.gameObject.name;
 		if(col.gameObject.name == "chave_de_corda"){
 			tempo_de_corda += 100.0f;
+			if(tempo_de_corda > corda_max)
+			{
+				tempo_de_corda = corda_max;
+			}
 			Destroy(col.gameObject);
 			Debug.Log("colidiu");
 			}
@@ -94,8 +111,13 @@ public class jogador : MonoBehaviour {
 
 			//resetspeed = true;
 		}
-		if(col.gameObject.name == "checkpoint"){
-
+		if(col.gameObject.tag == "check_point"){
+			manager.vida_p = vida;
+			manager.vida_max_p = vida_max;
+			manager.tempo_de_corda_p = tempo_de_corda;
+			manager.corda_max_p = corda_max;
+			manager.checkpoint_p = col.gameObject.name;
+			//SaveLoad.Save(manager.scene_depo);
 			Destroy (col.gameObject);
 			manager.salvar = true;
 			//salva
@@ -117,8 +139,8 @@ public class jogador : MonoBehaviour {
 			Destroy (col.gameObject);
 			
 		}
-		if(col.gameObject.name == "cachorro"){
-			//vida -=1;
+		if(col.gameObject.name == "cachorro(Clone)" || col.gameObject.name == "cachorro"){
+			vida -=1;
 			if(col.gameObject.transform.position.x > gameObject.transform.position.x){
 				npos.x = gameObject.transform.position.x - 1.5f;
 				gameObject.rigidbody2D.MovePosition(npos);
@@ -129,6 +151,37 @@ public class jogador : MonoBehaviour {
 
 			}
 			npos.x = 0;
+		}
+
+		if(col.gameObject.name == "macaco(Clone)" || col.gameObject.name == "macaco"){
+			//vida -=1;
+			if(col.gameObject.transform.position.x > gameObject.transform.position.x){
+				npos.x = gameObject.transform.position.x - 1.5f;
+				gameObject.rigidbody2D.MovePosition(npos);
+			}
+			if(col.gameObject.transform.position.x < gameObject.transform.position.x){
+				npos.x = gameObject.transform.position.x + 1.5f;
+				gameObject.rigidbody2D.MovePosition(npos);
+				
+			}
+			npos.x = 0;
+		}
+
+		if(col.gameObject.name == "rato(Clone)" || col.gameObject.name == "rato"){
+			//GameObject.Find("checkpoint_0"+)
+
+			np.x = 1000.0f;
+			GameObject[] ck = GameObject.FindGameObjectsWithTag("check_point");
+			for(int i =0;i< ck.Length;i++){
+				if(ck[i].transform.position.x > gameObject.transform.position.x){
+					if(ck[i].transform.position.x < np.x){
+						np.x = ck[i].transform.position.x;
+					}
+				}
+
+			}
+			gameObject.rigidbody2D.position = np;
+			//gameObject.rigidbody2D.MovePosition(np);
 		}
 
 

@@ -13,7 +13,7 @@ public class cabeça : MonoBehaviour {
 	
 	}
 	void OnCollisionEnter2D(Collision2D col){
-		if(col.gameObject.name == "Sofia"){
+		if(col.gameObject.tag == "Player"){
 			Destroy(transform.parent.gameObject);
 
 			Debug.Log("cabeça");
