@@ -16,7 +16,7 @@ public class gerente : MonoBehaviour
 	//bool novo_jogo = true;
 	GameObject npc;
 	GameObject p;
-	//deposito scene_depo;
+	deposito scene_depo;
 	//manager m;
 
 
