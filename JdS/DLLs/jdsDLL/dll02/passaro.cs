@@ -47,7 +47,7 @@ public class passaro : MonoBehaviour {
 		}
 	}
 	void OnTriggerExit2D(Collider2D col){
-		if(col.gameObject.name == "Sofia"){
+		if(col.gameObject.name == "Sofia" || col.gameObject.name == "Sofia(Clone)"){
 			Debug.Log ("SAIU DA COLISAO");
 			rigidbody2D.velocity = new Vector2(-1,0) * 20;
 			Destroy (gameObject, 3);

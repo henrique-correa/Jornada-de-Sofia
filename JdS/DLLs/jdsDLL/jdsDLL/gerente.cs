@@ -12,25 +12,15 @@ using System.Text;
 public class gerente : MonoBehaviour
 {
 
-<<<<<<< HEAD
 	//GameObject npc1;
 	//GameObject npc2;
 	public List<GameObject> obj_list;
 	public List<deposito> scene_depo;
-=======
-	Vector3 pos = new Vector3(2.80f, 0.40f, 0.0f);
-	Vector3 pos_p = new Vector3(-2.29f, 0.48f, 0.0f);
-	//bool novo_jogo = true;
-	GameObject npc;
-	GameObject p;
-	deposito scene_depo;
-	//manager m;
->>>>>>> origin/master
 
 	void criar_scene() {
 		//AI director ve quais os parametros para criar os objetos da scene
 		if(manager.novo_jogo == true) {
-			scene_depo = SaveLoad.Load("D:/UnityProj/fase_01.txt");
+			scene_depo = SaveLoad.Load("Assets/data_base/fase_01.txt");
 			/*Debug.Log(scene_depo[0].tipo);
 			Debug.Log (scene_depo[1].tipo);
 			
@@ -60,7 +50,7 @@ public class gerente : MonoBehaviour
 			}*/
 		}
 		else if (manager.cont == 0){
-			scene_depo = SaveLoad.Load("E:/salvoUNITY/save.sg");
+			scene_depo = SaveLoad.Load("Assets/salvo/save.sg");
 
 			/*for(int i=0; i < scene_depo.Count; i++){
 				if(scene_depo[i].tipo == "Sofia(Clone)" || scene_depo[i].tipo == "Sofia"){
@@ -89,7 +79,7 @@ public class gerente : MonoBehaviour
 		}
 		else if(manager.cont == 1){
 			string n = manager.next_lvl_id.ToString();
-			scene_depo = SaveLoad.Load("D:/UnityProj/fase_01.txt");
+			scene_depo = SaveLoad.Load("Assets/data_base/fase_0"+ n +".txt");
 			
 			/*for(int i=0; i < scene_depo.Count; i++){
 				if(scene_depo[i].tipo == "Sofia(Clone)" || scene_depo[i].tipo == "Sofia"){

@@ -58,7 +58,8 @@ public class manager : MonoBehaviour
 					lixo = GameObject.FindGameObjectWithTag("gerent");
 					Destroy(lixo);
 					//manager.novo_jogo = true;
-				Application.LoadLevel("cena01");
+				//Application.LoadLevel("cena01");
+				Application.LoadLevel(Application.loadedLevelName);
 					manager.p_morreu = false;
 					//manager.gerente = false;
 

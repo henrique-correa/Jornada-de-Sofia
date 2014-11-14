@@ -1,29 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release" />
-<<<<<<< HEAD
-  <MonoDevelop.Ide.Workbench ActiveDocument="jdsDLL\gerente.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="jdsDLL\jogador.cs">
     <Files>
-      <File FileName="jdsDLL\gerente.cs" Line="13" Column="2" />
-      <File FileName="jdsDLL\manager.cs" Line="26" Column="4" />
-      <File FileName="jdsDLL\save_load.cs" Line="94" Column="27" />
-      <File FileName="jdsDLL\deposito.cs" Line="1" Column="1" />
-      <File FileName="jdsDLL\jogador.cs" Line="184" Column="6" />
-      <File FileName="jdsDLL\main_menu.cs" Line="19" Column="2" />
-      <File FileName="dll02\macaco.cs" Line="86" Column="29" />
-      <File FileName="dll02\rato.cs" Line="24" Column="2" />
-      <File FileName="dll02\inimigo_cachorro.cs" Line="38" Column="5" />
-=======
-  <MonoDevelop.Ide.Workbench ActiveDocument="jdsDLL\deposito.cs">
-    <Files>
-      <File FileName="jdsDLL\PlatformerCharacter2D.cs" Line="1" Column="1" />
-      <File FileName="dll02\inimigo_cachorro.cs" Line="1" Column="1" />
-      <File FileName="jdsDLL\jogador.cs" Line="1" Column="1" />
-      <File FileName="dll02\cabeça.cs" Line="1" Column="1" />
-      <File FileName="jdsDLL\deposito.cs" Line="18" Column="4" />
-      <File FileName="jdsDLL\gerente.cs" Line="32" Column="6" />
-      <File FileName="g:\Familia Silva\Frederico\Estudos\Curso Jogos Digitais\Terceiro semestre\Projeto de Motores\ProjetoGitHub\Jornada-de-Sofia\JdS\DLLs\jdsDLL\jdsDLL\Platformer2DUserControl.cs" Line="1" Column="7" />
-      <File FileName="jdsDLL\save_load.cs" Line="28" Column="146" />
->>>>>>> origin/master
+      <File FileName="dll02\rato.cs" Line="1" Column="1" />
+      <File FileName="jdsDLL\jogador.cs" Line="187" Column="41" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

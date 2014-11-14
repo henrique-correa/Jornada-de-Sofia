@@ -36,11 +36,6 @@
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>..\..\..\..\..\..\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
-    <Reference Include="UnityEngine">
-      <HintPath>D:\Programas Frederico\Unity\Data\Managed\UnityEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEditor">
-      <HintPath>D:\Programas Frederico\Unity\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -58,10 +53,4 @@
     <Compile Include="manager.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <ItemGroup>
-    <ProjectReference Include="..\dll03\dll03.csproj">
-      <Project>{59F16FAB-47B5-4E02-B201-FCA945BB418D}</Project>
-      <Name>dll03</Name>
-    </ProjectReference>
-  </ItemGroup>
 </Project>

@@ -12,13 +12,12 @@ using System.IO;
 
 public class SaveLoad {
 
-<<<<<<< HEAD
 
 
 	public static void Save(List<GameObject> aSerSalvo) {
 		 
 		StreamWriter r;
-		r = File.CreateText("E:/salvoUNITY/save.sg");
+		r = File.CreateText("Assets/salvo/save.sg");
 		string linha = "#tipo    x     y     vida     vida_max     corda     corda_max     fase     checkpoint";
 		r.WriteLine(linha);
 		for(int i=0; i < aSerSalvo.Count ;i++){
@@ -87,20 +86,6 @@ public class SaveLoad {
 					temp.y = float.Parse( l[2] );
 					scene_depoLOADED.Add(temp);
 				}
-=======
-		//Application.persistentDataPath is a string, so if you wanted you can put that into debug.log if you want to know where save games are located
-		FileStream f = File.Create ("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg"); //you can call it anything you want
-		bf.Serialize(f, s);
-		f.Close();
-	}   
-	
-	public static void Load() {
-		if(File.Exists("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg")) {
-			BinaryFormatter bfl = new BinaryFormatter();
-			FileStream fl = File.Open("G:/Familia Silva/Frederico/Estudos/Curso Jogos Digitais/Terceiro semestre/Projeto de Motores/ProjetoGitHub/save.sg", FileMode.Open);
-			scene_depoLOADED = (deposito)bfl.Deserialize(fl);
-			fl.Close();
->>>>>>> origin/master
 
 				Debug.Log(scene_depoLOADED[0].x);
 			}
@@ -111,7 +96,7 @@ public class SaveLoad {
 
 	public static void SaveLevel(){
 		StreamWriter r;
-		r = File.CreateText("E:/salvoUNITY/ll.ll");
+		r = File.CreateText("Assets/salvo/ll.ll");
 		string linha;
 		linha = Application.loadedLevel.ToString();
 		r.WriteLine(linha);
@@ -120,9 +105,9 @@ public class SaveLoad {
 
 	public static int LoadLevel(){
 		int lvl = 0;
-		if(File.Exists("E:/salvoUNITY/ll.ll")){
+		if(File.Exists("Assets/salvo/ll.ll")){
 			StreamReader r;
-			r = File.OpenText("E:/salvoUNITY/ll.ll");
+			r = File.OpenText("Assets/salvo/ll.ll");
 			string linha;
 			linha = r.ReadLine();
 			lvl = int.Parse(linha);

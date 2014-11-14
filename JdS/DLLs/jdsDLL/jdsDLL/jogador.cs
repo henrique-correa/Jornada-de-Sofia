@@ -15,11 +15,11 @@ public class jogador : MonoBehaviour {
 	Vector2 np;
 	Vector2 npos;
 	GameObject texto;
-	GameObject texto2;
-	GameObject texto3;
+	//GameObject texto2;
+	//GameObject texto3;
 	bool resetspeed = false;
 	[SerializeField]int bj = 0;
-	bool colidiuPASSARO = false;
+	[SerializeField]bool colidiuPASSARO = false;
 
 	PlatformerCharacter2D charac;
 	Platformer2DUserControl charac2;
@@ -27,8 +27,8 @@ public class jogador : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		texto = GameObject.Find("debug_1");
-		texto2 = GameObject.Find("debug_2");
-		texto3 = GameObject.Find("debug_3");
+		//texto2 = GameObject.Find("debug_2");
+		//texto3 = GameObject.Find("debug_3");
 
 		if(manager.cont == 1){
 			vida_max = manager.vida_max_p;
@@ -48,39 +48,46 @@ public class jogador : MonoBehaviour {
 			tempo_de_corda -= 1.0f;
 		//if (tempo_de_corda < 1.0f){
 		}
-
+		if(colidiuPASSARO == true){
+			Debug.Log("entrou BJ2");
+			charac2.trancadoPassaro = true;
+			if(Input.GetButtonDown("Jump")){
+				Debug.Log("entrou BJ");
+				bj++;
+			}
+		}
+		if(bj >= 10){
+			
+			charac2.trancadoPassaro = false;
+			colidiuPASSARO = false;
+			bj = 0;
+		}
 
 		if(resetspeed == true){
 			charac.RESETMaxSpeed();
 			resetspeed = false;
 		}
-		texto.guiText.text = tempo_de_corda.ToString("0.0");
+		//texto.guiText.text = tempo_de_corda.ToString("0.0");
 		if(tempo_de_corda <= 0){
-			texto.guiText.text = "gameover";
+			//texto.guiText.text = "gameover";
 
 		}
 		if(vida <=0){
 			manager.p_morreu = true;
 			Destroy(gameObject);
 		}
-		if(colidiuPASSARO == true){
-			charac2.trancadoPassaro = true;
-			if(Input.GetButtonDown("Jump")){
-				bj++;
-			}
-		}
-		if(bj > 10){
-			charac2.trancadoPassaro = false;
-			colidiuPASSARO = false;
-			bj = 0;
-		}
+
+		/*if(vida <=0){
+			manager.p_morreu = true;
+			Destroy(gameObject);
+		}*/
 		 
 
 	
 	}
 	void OnTriggerEnter2D(Collider2D col){
 
-		texto2.guiText.text = col.gameObject.name;
+		//texto2.guiText.text = col.gameObject.name;
 		if(col.gameObject.name == "chave_de_corda"){
 			tempo_de_corda += 100.0f;
 			if(tempo_de_corda > corda_max)
@@ -88,18 +95,19 @@ public class jogador : MonoBehaviour {
 				tempo_de_corda = corda_max;
 			}
 			Destroy(col.gameObject);
-			Debug.Log("colidiu");
+			//Debug.Log("colidiu");
 			}
 		if(col.gameObject.name == "buraco")
 		{
-			texto3.guiText.text = "morreu";
+			//texto3.guiText.text = "morreu";
 			Destroy(col.gameObject);
 			//Destroy (gameObject);
 		}
-		if(col.gameObject.name == "passaros"){
+		if(col.gameObject.name == "passaros" || col.gameObject.name == "passaros(Clone)"){
 			
 			charac.setMaxSpeed(0.5f);
-			Debug.Log ("set speed 2");
+			//charac2.trancadoPassaro = true;
+			//Debug.Log ("set speed 2");
 			//charac2.trancaPULO();
 			colidiuPASSARO = true;
 			/*if(bj > 10)
@@ -176,6 +184,7 @@ public class jogador : MonoBehaviour {
 				if(ck[i].transform.position.x > gameObject.transform.position.x){
 					if(ck[i].transform.position.x < np.x){
 						np.x = ck[i].transform.position.x;
+						np.y = ck[i].transform.position.y;
 					}
 				}
 

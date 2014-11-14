@@ -42,8 +42,8 @@ public class hiena : MonoBehaviour {
 		hit = Physics2D.Raycast(transform.position,-Vector2.right,distancia_visao,raiolayer);
 		hit2 = Physics2D.Raycast(transform.position,Vector2.right,distancia_visao,raiolayer);
 
-		hit3 = Physics2D.Raycast(transform.position,-Vector2.right,1.5f,raiolayer);
-		hit4 = Physics2D.Raycast(transform.position,Vector2.right,1.5f,raiolayer);
+		hit3 = Physics2D.Raycast(transform.position,-Vector2.right,4.0f,raiolayer);
+		hit4 = Physics2D.Raycast(transform.position,Vector2.right,4.0f,raiolayer);
 		
 		
 		//Debug.Log (hit.ToString());
@@ -79,11 +79,11 @@ public class hiena : MonoBehaviour {
 			
 		}
 		if(hit3.collider != null){
-			gameObject.rigidbody2D.velocity = new Vector2(0.8f, 0.0f);
+			rigidbody2D.velocity = new Vector2(0.8f, 0.0f);
 
 		}
 		if(hit4.collider != null){
-			gameObject.rigidbody2D.velocity = new Vector2(-0.8f, 0.0f);
+			rigidbody2D.velocity = new Vector2(-0.8f, 0.0f);
 			
 		}
 	

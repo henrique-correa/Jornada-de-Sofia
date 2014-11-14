@@ -28,5 +28,6 @@ Global
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = jdsDLL\jdsDLL.csproj
+		outputpath = ..\..\Assets\dllJDS
 	EndGlobalSection
 EndGlobal
