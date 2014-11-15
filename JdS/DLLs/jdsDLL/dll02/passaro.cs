@@ -26,19 +26,15 @@ public class passaro : MonoBehaviour {
 			//rigidbody2D.AddForce(esquerda);
 			rigidbody2D.velocity = new Vector2(-1,0) * ini_velo;
 		}
-		//else {
-		//	rigidbody2D.velocity = new Vector2(0,0);
-		//}
+
+
 
 		if (hitp2.collider != null){
 			Debug.Log ("passaro inimigo ve o player");
 			//rigidbody2D.AddForce(direita);
 			rigidbody2D.velocity = new Vector2(1,0) * ini_velo;
+		
 		}
-		//else{
-		//	rigidbody2D.velocity = new Vector2(0,0);
-		//}
-
 	
 	}
 	void OnCollisionEnter2D(Collision2D col){

@@ -1,0 +1,46 @@
+Initialize engine version: 4.5.3f3 (fca41a4fabea)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: AMD Radeon HD 6700 Series (ID=0x68ba)
+    Vendor:   ATI
+    VRAM:     1013 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\dll02.dll (this message is harmless)
+Loading D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\dll02.dll into Unity Child Domain
+Platform assembly: D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\dll03.dll (this message is harmless)
+Loading D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\dll03.dll into Unity Child Domain
+Platform assembly: D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\jdsDLL.dll (this message is harmless)
+Loading D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\jdsDLL.dll into Unity Child Domain
+Platform assembly: D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\RBS.dll (this message is harmless)
+Loading D:\UnityProj\Jornada-de-Sofia\JdS\BUILD_ALPHA_0.1\JdS_0.1a_Data\Managed\RBS.dll into Unity Child Domain
+- Completed reload, in  0.051 seconds
+desktop: 1360x768 60Hz; virtual: 2384x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+UnloadTime: 0.351000 ms
+System memory in use before: 9.7 MB.
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 9.7 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 104.
+Total: 1.022552 ms (FindLiveObjects: 0.012657 ms CreateObjectMapping: 0.012315 ms MarkObjects: 0.121447 ms  DeleteObjects: 0.007184 ms)
+
+UnloadTime: 0.373921 ms
+System memory in use before: 9.7 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 9.7 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 107.
+Total: 0.995526 ms (FindLiveObjects: 0.009921 ms CreateObjectMapping: 0.010947 ms MarkObjects: 0.133078 ms  DeleteObjects: 0.007184 ms)
+
+UnloadTime: 0.247000 ms
+System memory in use before: 9.8 MB.
+Unloading 1 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+System memory in use after: 9.8 MB.
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 454.
+Total: 0.631184 ms (FindLiveObjects: 0.014710 ms CreateObjectMapping: 0.007868 ms MarkObjects: 0.150526 ms  DeleteObjects: 0.012657 ms)
+

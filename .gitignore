@@ -4,8 +4,7 @@ ehthumbs.db
 
 # Folder config file
 Desktop.ini
-Library
-ProjectSettings
+
 
 # Recycle Bin used on file shares
 $RECYCLE.BIN/
@@ -44,5 +43,26 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+JdS/Temp/
+JdS/Library/
 JdS/Library/CurrentLayout.dwlt
 JdS/Library/CurrentLayout.dwlt
+JdS/Library/assetDatabase3
+JdS/Library/EditorUserBuildSettings.asset
+JdS/Library/expandedItems
+JdS/Library/guidmapper
+JdS/Temp/__EditModeScene
+JdS/Temp/UnityLockfile
+JdS/Temp/tempFile.res
+JdS/Temp/StagingArea/JdS_0.2a_Data/sharedassets1.assets
+JdS/Temp/StagingArea/JdS_0.2a_Data/sharedassets0.assets
+JdS/Temp/StagingArea/JdS_0.2a_Data/Resources/unity_builtin_extra
+JdS/Temp/tempFile.resG
+JdS/Temp/__BuildPlayer Backupscene
+JdS/Temp/StagingArea/JdS_0.2a_Data/resources.assets
+JdS/Temp/StagingArea/JdS_0.2a_Data/Resources/unity default resources
+JdS/Temp/StagingArea/JdS_0.2a_Data/Mono/etc/mono/mconfig/config.xml
+JdS/Temp/StagingArea/JdS_0.2a_Data/Mono/etc/mono/config
+JdS/Temp/StagingArea/JdS_0.2a_Data/Mono/etc/mono/2.0/settings.map
+JdS/Temp/StagingArea/JdS_0.2a_Data/Mono/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx
+JdS/Library/assetDatabase3
