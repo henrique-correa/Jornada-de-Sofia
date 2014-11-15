@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll02", "dll02\dll02.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dll03", "dll03\dll03.csproj", "{59F16FAB-47B5-4E02-B201-FCA945BB418D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBS", "RBS\RBS.csproj", "{AAC85CAB-A1D5-467A-B21D-6C46866C5473}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -25,6 +27,10 @@ Global
 		{A582680D-493E-4EB2-99EA-FCF6D13CD0A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A582680D-493E-4EB2-99EA-FCF6D13CD0A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A582680D-493E-4EB2-99EA-FCF6D13CD0A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAC85CAB-A1D5-467A-B21D-6C46866C5473}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAC85CAB-A1D5-467A-B21D-6C46866C5473}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAC85CAB-A1D5-467A-B21D-6C46866C5473}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAC85CAB-A1D5-467A-B21D-6C46866C5473}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = jdsDLL\jdsDLL.csproj

@@ -4,12 +4,17 @@ using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
 using System.IO;
 
+
 [RequireComponent(typeof(deposito))]
+[RequireComponent(typeof(RBS_main))]
+
 //[RequireComponent(typeof(SaveLoad))]
+
 
 public class manager : MonoBehaviour
 {
-	
+
+
 	public static bool novo_jogo = true; 
 	public static bool salvar = false;
 	//public static deposito scene_depo;
@@ -33,14 +38,17 @@ public class manager : MonoBehaviour
 		pos.x = 0.0f;
 		pos.y = 0.0f;
 		pos.z = 0.0f;
+
 		
 		DontDestroyOnLoad(gameObject);
+
 	}
 	
 	
 	
 	void Update()
 	{
+	
 
 		if(manager.next_lvl == true){
 			Application.LoadLevel(next_lvl_id);	
