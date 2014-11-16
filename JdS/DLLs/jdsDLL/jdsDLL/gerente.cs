@@ -80,7 +80,7 @@ public class gerente : MonoBehaviour
 		else if(manager.cont == 1){
 			string n = manager.next_lvl_id.ToString();
 			scene_depo = SaveLoad.Load("Assets/data_base/fase_0"+ n +".txt");
-			
+
 			/*for(int i=0; i < scene_depo.Count; i++){
 				if(scene_depo[i].tipo == "Sofia(Clone)" || scene_depo[i].tipo == "Sofia"){
 					Vector3 pos;
@@ -108,6 +108,7 @@ public class gerente : MonoBehaviour
 
 		}
 
+
 		for(int i=0; i < scene_depo.Count; i++){
 			if(scene_depo[i].tipo == "Sofia(Clone)" || scene_depo[i].tipo == "Sofia"){
 				scene_depo[i].tipo = "Sofia";
@@ -115,12 +116,22 @@ public class gerente : MonoBehaviour
 				pos.x = scene_depo[i].x;
 				pos.y = scene_depo[i].y;
 				pos.z = 1.0f;
-				manager.vida_p = scene_depo[i].vida;
-				manager.vida_max_p = scene_depo[i].vida_max;
-				manager.tempo_de_corda_p = scene_depo[i].tempo_de_corda;
-				manager.corda_max_p = scene_depo[i].corda_max;
-				GameObject cp = GameObject.Find(manager.checkpoint_p);
-				Destroy(cp);
+				if(scene_depo[i].vida == -99){
+					manager.vida_p = scene_depo[i].vida;
+				}
+				if(scene_depo[i].vida_max == -99){
+					manager.vida_max_p = scene_depo[i].vida_max;
+				}
+				if(scene_depo[i].tempo_de_corda == -99.9){
+					manager.tempo_de_corda_p = scene_depo[i].tempo_de_corda;
+				}
+				if(scene_depo[i].corda_max == -99.9){
+					manager.corda_max_p = scene_depo[i].corda_max;
+				}
+				if(manager.cont == 0){
+					GameObject cp = GameObject.Find(manager.checkpoint_p);
+					Destroy(cp);
+				}
 				
 				//npc1 = 
 
@@ -161,6 +172,7 @@ public class gerente : MonoBehaviour
 			SaveLoad.SaveLevel();
 			manager.salvar = false;
 			manager.novo_jogo = false;
+			Debug.Log ("SALVO_CAVE");
 
 		}
 

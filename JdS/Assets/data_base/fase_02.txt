@@ -1,0 +1,9 @@
+#tipo    x     y     vida     vida_max     corda     corda_max     fase     checkpoint
+Sofia -0.41 -1.31 -99 -99 -99.9 -99.9 -99 0
+cachorro 8.05 -1.79 null null null null null null
+rato 15.56 1.24 null null null null null null
+Hiena 32.49 4.36 null null null null null null
+macaco 48.71 -1.87 null null null null null null
+cachorro 69.96 -7.78 null null null null null null
+macaco 85.78 4.36 null null null null null null
+Hiena 98.32 4.68 null null null null null null

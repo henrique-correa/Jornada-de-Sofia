@@ -28,6 +28,10 @@ public class manager : MonoBehaviour
 	public static int next_lvl_id;
 	public static int cont = 0;
 	public static bool p_morreu = false;
+	public static bool transition = false;
+	//public static string nova_cena = " ";
+	public static Vector2 nova_pos;
+
 	//public static bool gerente = false;
 	Vector3 pos;
 	GameObject lixo;
@@ -51,12 +55,18 @@ public class manager : MonoBehaviour
 	
 
 		if(manager.next_lvl == true){
-			Application.LoadLevel(next_lvl_id);	
-			manager.next_lvl = false;
+			if(manager.salvar == false){
+				lixo = GameObject.FindGameObjectWithTag("gerent");
+				Destroy(lixo);
+				manager.cont = 1;
+				manager.next_lvl = false;
+				Application.LoadLevel(next_lvl_id);
+			}
 		}
 		if(manager.p_morreu == true){
 			//Time.timeScale = 0.0f;
 		}
+
 	}
 	void OnGUI(){
 		if(manager.p_morreu == true){
