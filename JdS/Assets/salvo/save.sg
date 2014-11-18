@@ -1,7 +1,2 @@
 #tipo    x     y     vida     vida_max     corda     corda_max     fase     checkpoint
-Sofia(Clone) 58.65 -7.69 -99 -99 0 1000 2 checkpoint_01
-rato(Clone) 14.07 0.94 null null null null null null
-Hiena(Clone) 32.49 3.92 null null null null null null
-macaco(Clone) 48.71 -2.13 null null null null null null
-macaco(Clone) 85.78 4.05 null null null null null null
-Hiena(Clone) 98.32 4.01 null null null null null null
+Sofia(Clone) 41.21 -6.62 3 5 900 1000 3 checkpoint_01

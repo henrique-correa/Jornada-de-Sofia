@@ -11,8 +11,8 @@ using System.Text;
 
 public class gerente : MonoBehaviour
 {
-
-	//GameObject npc1;
+	Texture2D uiVida ;
+	GameObject pp;
 	//GameObject npc2;
 	public List<GameObject> obj_list;
 	public List<deposito> scene_depo;
@@ -79,7 +79,12 @@ public class gerente : MonoBehaviour
 		}
 		else if(manager.cont == 1){
 			string n = manager.next_lvl_id.ToString();
-			scene_depo = SaveLoad.Load("Assets/data_base/fase_0"+ n +".txt");
+			if(manager.pos_player == 2){
+				scene_depo = SaveLoad.Load("Assets/data_base/fase_0"+ n + manager.pos_player +".txt");
+			}
+			else if(manager.pos_player == 1){
+				scene_depo = SaveLoad.Load("Assets/data_base/fase_0"+ n +".txt");
+			}
 
 			/*for(int i=0; i < scene_depo.Count; i++){
 				if(scene_depo[i].tipo == "Sofia(Clone)" || scene_depo[i].tipo == "Sofia"){
@@ -159,6 +164,9 @@ public class gerente : MonoBehaviour
 		criar_scene();
 		manager.fase_p = Application.loadedLevel;
 		//Debug.Log(Application.persistentDataPath);
+		pp = GameObject.FindGameObjectWithTag("Player");
+		//pp.GetComponent<jogador>().;
+		uiVida = Instantiate(Resources.Load("UI_vida")) as Texture2D;//,new Vector3(0.08f,0.5f,1f),Quaternion.identity) as Texture2D;
 	}
 
 
@@ -176,5 +184,15 @@ public class gerente : MonoBehaviour
 
 		}
 
+	}
+	void OnGUI(){
+		GUI.Box(new Rect(20,40,50,20),"fase "+ Application.loadedLevel);
+		GUI.Box(new Rect(20,80,80,20),"tempo "+ pp.GetComponent<jogador>().get_temp_corda());
+		GUI.Box (new Rect(20,120,80,80),"vida");
+		//for(int i= 0; i < pp.GetComponent<jogador>().get_vida() ; i++){
+			GUI.DrawTexture(new Rect(20,120,80,80),uiVida);
+
+
+		//}
 	}
 }

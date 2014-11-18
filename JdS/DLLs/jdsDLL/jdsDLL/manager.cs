@@ -29,12 +29,13 @@ public class manager : MonoBehaviour
 	public static int cont = 0;
 	public static bool p_morreu = false;
 	public static bool transition = false;
-	//public static string nova_cena = " ";
+	public static int pos_player = 1;
 	public static Vector2 nova_pos;
 
 	//public static bool gerente = false;
 	Vector3 pos;
 	GameObject lixo;
+	GameObject lixo2;
 
 
 	void Start(){
@@ -57,6 +58,8 @@ public class manager : MonoBehaviour
 		if(manager.next_lvl == true){
 			if(manager.salvar == false){
 				lixo = GameObject.FindGameObjectWithTag("gerent");
+				lixo2 = GameObject.FindGameObjectWithTag("Player");
+				Destroy(lixo2);
 				Destroy(lixo);
 				manager.cont = 1;
 				manager.next_lvl = false;

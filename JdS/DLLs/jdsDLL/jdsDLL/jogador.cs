@@ -145,6 +145,39 @@ public class jogador : MonoBehaviour {
 
 		}
 
+		if(col.gameObject.name == "cave_transition_02"){
+			manager.vida_p = vida;
+			manager.vida_max_p = vida_max;
+			manager.tempo_de_corda_p = tempo_de_corda;
+			manager.corda_max_p = corda_max;
+			
+			
+			manager.next_lvl_id = 2;
+			manager.pos_player = 2;
+			//manager.nova_pos = 1;
+			//manager.next_lvl = true;
+			manager.next_lvl = true;
+			manager.salvar = true;
+			
+		}
+		if(col.gameObject.name == "sky_transition_01"){
+			manager.vida_p = vida;
+			manager.vida_max_p = vida_max;
+			manager.tempo_de_corda_p = tempo_de_corda;
+			manager.corda_max_p = corda_max;
+			
+			
+			manager.next_lvl_id = 3;
+			//manager.pos_player = 2;
+			//manager.nova_pos = 1;
+			//manager.next_lvl = true;
+			manager.next_lvl = true;
+			manager.salvar = true;
+			
+		}
+
+
+
 
 
 	}
@@ -220,6 +253,13 @@ public class jogador : MonoBehaviour {
 	//}
 	void FixedUpdate (){
 
+	}
+
+	public float get_temp_corda(){
+		return tempo_de_corda;
+	}
+	public int get_vida(){
+		return vida;
 	}
 
 
