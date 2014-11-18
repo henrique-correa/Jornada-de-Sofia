@@ -2,7 +2,7 @@ using UnityEngine;
 using System.Collections;
 
 public class macaco : MonoBehaviour {
-
+	bool direita = true;
 	RaycastHit2D hit;
 	RaycastHit2D hit2;
 	RaycastHit2D hit3;
@@ -22,7 +22,8 @@ public class macaco : MonoBehaviour {
 	[SerializeField]float distancia_visao_tiro = 5.0f;
 	[SerializeField]float tiro_vel = 10.0f;
 	[SerializeField]float distancia_visao = 5.0f;
-	
+	Animator anim;
+
 	// Use this for initialization
 	void Start () {
 		//tirom = gameObject.rigidbody2D.transform.position;
@@ -35,6 +36,7 @@ public class macaco : MonoBehaviour {
 		//vel_tiro2.y = 0.0f;
 		
 		raiolayer = 1 << 8;
+		anim = GetComponent<Animator>();
 	}
 
 
@@ -54,74 +56,72 @@ public class macaco : MonoBehaviour {
 		//Debug.Log (hit.ToString());
 		//nome = hit.ToString();
 		if (hit.collider != null){
+			if(direita == true){
+				Flip ();
+				direita = false;
+			}
 			Debug.Log ("inimigo ve o player");
 			if(Time.time > proximo_tiro){
 				proximo_tiro = Time.time + tiro_rate;
 				banana = Instantiate(Resources.Load("risada"),tirom,Quaternion.identity) as GameObject;
 				Physics2D.IgnoreCollision (gameObject.rigidbody2D.collider2D,banana.gameObject.rigidbody2D.collider2D);
-				//ris.rigidbody2D.AddRelativeForce(vel_tiro);
-				//ris.gameObject.rigidbody2D.AddRelativeForce(vel_tiro);
+				anim.SetBool("tiro",true);
 				banana.gameObject.rigidbody2D.velocity = new Vector2(-1.0f,0.0f) * tiro_vel;
-				
-
-				//pode_atirar = false;
+				anim.SetBool("tiro", false);
 			}
 			
 		}
 		if (hit2.collider != null){
+			if(direita == false){
+				Flip();
+				direita = true;
+			}
 			Debug.Log ("inimigo ve o player");
 			if(Time.time > proximo_tiro){
 				proximo_tiro = Time.time + tiro_rate;
 				banana = Instantiate(Resources.Load("risada"),tirom2,Quaternion.identity) as GameObject;
 				Physics2D.IgnoreCollision(gameObject.rigidbody2D.collider2D,banana.gameObject.rigidbody2D.collider2D);
-				//ris.rigidbody2D.AddRelativeForce(vel_tiro);
-				//ris.gameObject.rigidbody2D.AddRelativeForce(vel_tiro2);
-				banana.gameObject.rigidbody2D.velocity = new Vector2(1.0f,0.0f) * tiro_vel;
-				
-				
-				//pode_atirar = false;
+				anim.SetBool("tiro",true);
+				banana.gameObject.rigidbody2D.velocity = new Vector2(1.0f,0.0f) * tiro_vel;	
+				anim.SetBool("tiro", false);
 			}
 
 		}
 		if(hit3.collider != null){
-			//if(gameObject.rigidbody2D.transform.position.x < 0){
-			//	x_macaco = gameObject.rigidbody2D.transform.position.x * -1;
-
-			//}
-			//if(hit3.collider.transform.position.x < 0){
-			//	x_player = hit3.collider.transform.position.x * -1;
-
-			//}
-			//dist = x_macaco - x_player;
-
-			//if(dist < 0){
-		//		dist = dist * -1;
-			//}
-			//if(dist > 1.6){
-				gameObject.rigidbody2D.velocity = new Vector2(-0.8f, 0.0f);
-			//}
-
+			if(direita == true){
+				Flip();
+				direita = false;
+			}
+			gameObject.rigidbody2D.velocity = new Vector2(-0.8f, 0.0f);
+			anim.SetBool("ve_player", true);
 		}
 
 		if(hit4.collider != null){
-		//	if(gameObject.rigidbody2D.transform.position.x < 0){
-			//	x_macaco = gameObject.rigidbody2D.transform.position.x * -1;
-			//	Debug.Log ("x macaco" + x_macaco);
-			//}
-			//if(hit4.collider.transform.position.x < 0){
-			//	x_player = hit3.collider.transform.position.x * -1;
-			//	Debug.Log ("x player" + x_player);
-			//}
-			//dist = x_player - x_macaco;
-			//if(dist < 0){
-			//	dist = dist * -1;
-			//}
-			//Debug.Log ("distancia" + dist);
-			//if(dist < 1.6){
-				gameObject.rigidbody2D.velocity = new Vector2(0.8f, 0.0f);
-			//}
-			
+			if(direita == false){
+				Flip();
+				direita = true;
+			}
+			gameObject.rigidbody2D.velocity = new Vector2(0.8f, 0.0f);
+			anim.SetBool("ve_player", true);
+		}
+		if(hit3.collider == null && hit4.collider == null){
+			anim.SetBool("ve_player", false);
 		}
 		
+	}
+
+	void OnCollisionEnter2D(Collision col){
+		if(col.gameObject.name == "Sofia" || col.gameObject.name == "Sofia(Clone)"){
+			anim.SetBool("soco", true);
+		}
+		anim.SetBool("soco", false);
+
+	}
+
+	void Flip ()
+	{
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }

@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class hiena : MonoBehaviour {
+	bool esquerda = true;
+	bool movendo = false;
 	RaycastHit2D hit;
 	RaycastHit2D hit2;
 	RaycastHit2D hit3;
@@ -17,6 +19,7 @@ public class hiena : MonoBehaviour {
 	[SerializeField]float tiro_rate = 50.0f;
 	[SerializeField]float distancia_visao = 5.0f;
 	[SerializeField]float tiro_vel = 10.0f;
+	Animator anim;
 
 	// Use this for initialization
 	void Start () {
@@ -30,6 +33,8 @@ public class hiena : MonoBehaviour {
 		vel_tiro2.y = 0.0f;
 	
 		raiolayer = 1 << 8;
+
+		anim = GetComponent<Animator>();
 	}
 	
 	// Update is called once per frame
@@ -49,14 +54,22 @@ public class hiena : MonoBehaviour {
 		//Debug.Log (hit.ToString());
 		//nome = hit.ToString();
 		if (hit.collider != null){
+			if(movendo == false){
+				if(esquerda == false){
+					Flip();
+					esquerda = true;
+				}
+			}
 			Debug.Log ("inimigo ve o player");
+
 			if(Time.time > proximo_tiro){
 				proximo_tiro = Time.time + tiro_rate;
-			ris = Instantiate(Resources.Load("risada"),tiro,Quaternion.identity) as GameObject;
+				ris = Instantiate(Resources.Load("risada"),tiro,Quaternion.identity) as GameObject;
 				Physics2D.IgnoreCollision (gameObject.rigidbody2D.collider2D,ris.gameObject.rigidbody2D.collider2D);
 				//ris.rigidbody2D.AddRelativeForce(vel_tiro);
 				//ris.gameObject.rigidbody2D.AddRelativeForce(vel_tiro);
 				ris.gameObject.rigidbody2D.velocity = new Vector2(-1.0f,0.0f) * tiro_vel;
+
 
 
 				//pode_atirar = false;
@@ -64,6 +77,12 @@ public class hiena : MonoBehaviour {
 
 		}
 		if (hit2.collider != null){
+			if(movendo == false){
+				if(esquerda == true){
+					Flip();
+					esquerda = false;
+				}
+			}
 			Debug.Log ("inimigo ve o player");
 			if(Time.time > proximo_tiro){
 				proximo_tiro = Time.time + tiro_rate;
@@ -72,23 +91,52 @@ public class hiena : MonoBehaviour {
 				//ris.rigidbody2D.AddRelativeForce(vel_tiro);
 				//ris.gameObject.rigidbody2D.AddRelativeForce(vel_tiro2);
 				ris.gameObject.rigidbody2D.velocity = new Vector2(1.0f,0.0f) * tiro_vel;
-				
+
 				
 				//pode_atirar = false;
 			}
 			
 		}
 		if(hit3.collider != null){
+			movendo = true;
 			rigidbody2D.velocity = new Vector2(0.8f, 0.0f);
+
+				if(esquerda == true){
+					Flip();
+					esquerda = false;
+				}
+
+			anim.SetBool("ve_player", true);
 
 		}
 		if(hit4.collider != null){
+			movendo = true;
 			rigidbody2D.velocity = new Vector2(-0.8f, 0.0f);
-			
+			if(esquerda == false){
+				Flip();
+				esquerda = true;
+			}
+			anim.SetBool("ve_player", true);
+		}
+
+		if(hit3.collider == null && hit4.collider == null){
+			movendo = false;
+			anim.SetBool ("ve_player",false);
 		}
 	
 	}
 	void OnTriggerEnter2D(Collider2D col){
 
+	}
+
+	void Flip ()
+	{
+		// Switch the way the player is labelled as facing.
+		//facingRight = !facingRight;
+		
+		// Multiply the player's x local scale by -1.
+		Vector3 theScale = transform.localScale;
+		theScale.x *= -1;
+		transform.localScale = theScale;
 	}
 }

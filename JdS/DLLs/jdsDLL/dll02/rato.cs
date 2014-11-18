@@ -20,11 +20,13 @@ public class rato : MonoBehaviour
 	[SerializeField]float vel = 0.8f;
 	[SerializeField]float distancia_visao = 5.0f;
 	bool direita = true;
+	Animator anim;
 
 
 
 	void Start(){
 		raiolayer = 1 << 8;
+		anim = GetComponent<Animator>();
 	}
 
 	void FixedUpdate(){
@@ -38,6 +40,7 @@ public class rato : MonoBehaviour
 				direita = false;
 			}
 			gameObject.rigidbody2D.velocity = new Vector2(-1.0f, 0.0f) * vel;
+			anim.SetBool("ve_player",true);
 		}
 
 		if(hit2.collider != null ){
@@ -46,6 +49,12 @@ public class rato : MonoBehaviour
 				direita = true;
 			}
 			gameObject.rigidbody2D.velocity = new Vector2(1.0f, 0.0f) * vel;
+			anim.SetBool("ve_player",true);
+		}
+
+
+		if(hit.collider == null && hit2.collider == null){
+			anim.SetBool("ve_player",false);
 		}
 	}
 

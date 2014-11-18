@@ -73,8 +73,8 @@ public class jogador : MonoBehaviour {
 
 		}
 		if(vida <=0){
-			manager.p_morreu = true;
-			Destroy(gameObject);
+			//manager.p_morreu = true;
+			//Destroy(gameObject);
 		}
 
 		/*if(vida <=0){
@@ -129,6 +129,20 @@ public class jogador : MonoBehaviour {
 			Destroy (col.gameObject);
 			manager.salvar = true;
 			//salva
+		}
+		if(col.gameObject.name == "cave_transition_01"){
+			manager.vida_p = vida;
+			manager.vida_max_p = vida_max;
+			manager.tempo_de_corda_p = tempo_de_corda;
+			manager.corda_max_p = corda_max;
+
+
+			manager.next_lvl_id = 2;
+			//manager.nova_pos = 1;
+			//manager.next_lvl = true;
+			manager.next_lvl = true;
+			manager.salvar = true;
+
 		}
 
 
